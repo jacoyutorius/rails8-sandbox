@@ -8,6 +8,7 @@ services:
       dockerfile: docker/Dockerfile.dev # ここでDockerfile.devを指定
     volumes:
       - ".:/app" # ローカルのコードをコンテナ内にマウント
+      - ./tmp:/tmp # tmpディレクトリをマウント（キャッシュを防ぐため）
     ports:
       - "3000:3000" # ホストの3000ポートをコンテナの3000ポートにマッピング
     # depends_on:

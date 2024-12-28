@@ -14,7 +14,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_28_220107) do
   create_table "messages", force: :cascade do |t|
     t.datetime "published_at"
     t.text "sender"
-    t.text "context"
+    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

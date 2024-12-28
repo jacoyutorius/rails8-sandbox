@@ -14,7 +14,7 @@ class MessagesTest < ApplicationSystemTestCase
     visit messages_url
     click_on "New message"
 
-    fill_in "Context", with: @message.context
+    fill_in "Context", with: @message.content
     fill_in "Published at", with: @message.published_at
     fill_in "Sender", with: @message.sender
     click_on "Create Message"
@@ -27,7 +27,7 @@ class MessagesTest < ApplicationSystemTestCase
     visit message_url(@message)
     click_on "Edit this message", match: :first
 
-    fill_in "Context", with: @message.context
+    fill_in "Context", with: @message.content
     fill_in "Published at", with: @message.published_at.to_s
     fill_in "Sender", with: @message.sender
     click_on "Update Message"

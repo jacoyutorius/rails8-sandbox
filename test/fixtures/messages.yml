@@ -3,9 +3,9 @@
 one:
   published_at: 2024-12-28 22:01:07
   sender: MyText
-  context: MyText
+  content: MyText
 
 two:
   published_at: 2024-12-28 22:01:07
   sender: MyText
-  context: MyText
+  content: MyText

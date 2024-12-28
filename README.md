@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+---
+
+[Rails 7でリアルタイム通信を実現！ Action Cableの基本をチュートリアルとともに理解しよう](https://codezine.jp/article/detail/17960?p=2)

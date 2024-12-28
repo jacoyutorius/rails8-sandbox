@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  # Rails アプリケーションのサービス
+  web:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.dev # ここでDockerfile.devを指定
+    volumes:
+      - ".:/app" # ローカルのコードをコンテナ内にマウント
+    ports:
+      - "3000:3000" # ホストの3000ポートをコンテナの3000ポートにマッピング
+    # depends_on:
+    #   - db # PostgreSQL データベースに依存
+    environment:
+      - RAILS_ENV=development
+      # - DATABASE_URL=postgres://postgres:password@db:5432/rails_development
+    command: ["rails", "server", "-b", "0.0.0.0"]
+
+  # あえてsqliteを使いたいのでコメントアウト
+  # # PostgreSQL データベースのサービス
+  # db:
+  #   image: postgres:13
+  #   volumes:
+  #     - "postgres_data:/var/lib/postgresql/data" # 永続データ保存
+  #   environment:
+  #     POSTGRES_PASSWORD: password
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_DB: rails_development
+# volumes:
+#   postgres_data:
+#     driver: local

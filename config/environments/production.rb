@@ -79,6 +79,12 @@ Rails.application.configure do
   # Only use :id for inspections in production.
   config.active_record.attributes_for_inspect = [ :id ]
 
+  # Action Cable の許可されたオリジンを設定
+  config.action_cable.allowed_request_origins = [
+    "http://localhost:3000" # ローカル開発用
+    # "https://your-production-domain.com" # 本番ドメイン
+  ]
+
   # Enable DNS rebinding protection and other `Host` header attacks.
   # config.hosts = [
   #   "example.com",     # Allow requests from example.com

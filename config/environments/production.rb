@@ -83,7 +83,7 @@ Rails.application.configure do
   config.action_cable.allowed_request_origins = [
     "http://localhost:3000", # ローカル開発用
     "https://18.182.128.4",
-    "https://rails8-sandbox.jacoyutorius.work"
+    "https://rails8-sandbox.jacoyutorius.work",
     # "https://your-production-domain.com" # 本番ドメイン
   ]
 
